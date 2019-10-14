@@ -2,4 +2,3 @@ node_modules
 dev.js
 config
 package-lock.json
-client

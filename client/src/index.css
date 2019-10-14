@@ -1,0 +1,27 @@
+.brand-logo {
+  padding-left: 10px !important;
+}
+.sidenav-trigger {
+  display: inline !important;
+}
+.card .card-action {
+  padding: 16px 0px !important;
+}
+#login-form {
+  padding-left: 0px !important;
+}
+#signup-form {
+  padding-right: 0px !important;
+}
+#account {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+@media only screen and (max-width: 600px) {
+  #login-form {
+    padding-right: 0px !important;
+  }
+  #signup-form {
+    padding-left: 0px !important;
+  }
+}
