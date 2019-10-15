@@ -1,0 +1,4 @@
+{
+  "myprivatekey": "myprivatekey",
+  "mongoURI": "mongodb://wilson:Wilson123@ds031691.mlab.com:31691/ecomy"
+}

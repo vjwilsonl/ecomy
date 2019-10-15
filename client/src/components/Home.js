@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 class Home extends Component {
   constructor() {
@@ -9,6 +10,7 @@ class Home extends Component {
     };
   }
   componentDidMount() {
+    M.AutoInit();
     //GET message from server using fetch api
     fetch('api/users/current')
       .then(res => res.text())
@@ -27,7 +29,7 @@ class Home extends Component {
           'https://productphoto-cdn.sirv.com/Portfolio/Bags/BagPhotography1.jpg?quality=92'
       },
       {
-        name: 'Item 2',
+        name: 'Item2',
         price: '$100',
         qty: '1',
         img:
@@ -86,9 +88,9 @@ class Home extends Component {
 
     let cards = [];
 
-    products.forEach(function(product) {
+    products.forEach(function(product, index) {
       cards.push(
-        <div className="col s6 m4">
+        <div key={index} className="col s6 m4">
           <div className="card">
             <div className="card-image waves-effect waves-block waves-light">
               <img className="activator" src={product.img} />
@@ -96,14 +98,14 @@ class Home extends Component {
             <div className="card-content">
               <span className="card-title activator grey-text text-darken-4">
                 {product.name}
-                <i className="material-icons right">more_vert</i>
+                <i className="material-icons right teal-text">more_vert</i>
               </span>
-              <div className="card-action">
-                <a className="left" href="#">
-                  Qty: 1
+              <div className="card-action ">
+                <a className="left grey-text text-darken-4" href="#">
+                  Qty: {product.qty}
                 </a>
-                <a className="right" href="#">
-                  $10
+                <a className="right price-text" href="#">
+                  {product.price}
                 </a>
               </div>
             </div>

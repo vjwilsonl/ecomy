@@ -6,7 +6,6 @@ import withAuth from './withAuth';
 
 import Navbar from './Navbar';
 import Login from './Login';
-import Secret from './Secret';
 import Account from './Account';
 import Home from './Home';
 import ChangePassword from './ChangePassword';
@@ -17,7 +16,6 @@ const MyApp = props => (
       <Navbar />
       <Route exact path="/" component={withAuth(Home)} />
       <Route exact path="/login" component={Login} />
-      <Route exact path="/secret" component={Secret} />
       <Route exact path="/account" component={withAuth(Account)} />
       <Route
         exact
